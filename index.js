@@ -30,7 +30,8 @@ async function writeReadMe (){
 
         const projectTitle = response.projectTitle.charAt(0).toUpperCase() + response.projectTitle.slice(1);
         const description = response.description;
-        const userInput = ``
+        const userInput = `${projectTitle}:
+        `
 
         fs.writeFile(fileName, userInput, function(err){
             if(err){
