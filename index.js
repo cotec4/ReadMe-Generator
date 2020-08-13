@@ -101,17 +101,16 @@ async function writeReadMe (){
         ${test}
         
         Questions:
-        https://github.com/${gitHub}
+        [a link] (https://github.com/${gitHub})
         
-        For any additional questions, please reach out to me at ${email}`
+        For any additional questions, please reach out to me at [a link] (${email})`
 
         fs.writeFile(fileName, userInput, function(err){
             if(err){
                 console.log(err);
             }
-            console.log("Success! A ReadMe has been generated!")
-        })
-    })
-
+            console.log("Success! A ReadMe has been generated!");
+        });
+    });
 }
 writeReadMe();
