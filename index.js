@@ -35,7 +35,7 @@ async function writeReadMe (){
             name: "test"
         },
         {
-            type: "checkbox",
+            type: "list",
             message: "Which license have you used in your application?",
             name: "license",
             choices: [
@@ -70,40 +70,40 @@ async function writeReadMe (){
         const license = response.license;
         const gitHub = response.gitHub;
         const email = response.email;
-        const userInput = 
-        
-        `${projectTitle}
+        const userInput =         
+`# ${projectTitle}
 
-        Description:
-        ${description}
+Table of Contents:
+1. [Description](#description)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [License](#license)
+5. [Contributing](#contributing)
+6. [Tests](#tests)
+7. [Questions](#questions)
+
+# Description:
+${description}
         
-        Table of Contents:
-        1. Installation
-        2. Usage
-        3. License
-        4. Contributing
-        5. Tests
-        6. Questions
+# Installation:
+${installation}
         
-        Installation:
-        ${installation}
+# Usage:
+${usage}
         
-        Usage:
-        ${usage}
+# Licensing:
+${license}
         
-        Licensing:
-        ${license}
+# Contributing:
+${contribution}
         
-        Contributing:
-        ${contribution}
+# Tests:
+${test}
         
-        Tests:
-        ${test}
-        
-        Questions:
-        [a link] (https://github.com/${gitHub})
-        
-        For any additional questions, please reach out to me at [a link] (${email})`
+# Questions:
+
+GitHub: https://github.com/${gitHub}        
+For any additional questions, please reach out to me at ${email}`
 
         fs.writeFile(fileName, userInput, function(err){
             if(err){
