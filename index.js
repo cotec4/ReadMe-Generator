@@ -69,7 +69,7 @@ async function writeReadMe() {
             const test = response.test;
             const license = response.license;
             if (license === "MIT")
-                licenseURL = "https://img.shields.io/badge/license-MIT-green";
+                licenseURL = "(https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)";
             else if (license === "GNU AGPLv3")
                 licenseURL = "(https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)";
             else if (license === "GNU GPLv3")
