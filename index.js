@@ -59,7 +59,7 @@ async function writeReadMe() {
             }
         ])
         .then(function (response) {
-            const fileName = "ReadMe.md";
+            const fileName = "ReadMe (example).md";
 
             const projectTitle = response.projectTitle.charAt(0).toUpperCase() + response.projectTitle.slice(1);
             const description = response.description;
@@ -85,7 +85,7 @@ async function writeReadMe() {
             const userInput =
 `# ${projectTitle}
 
-[![License]${licenseURL}
+[![License: ${license}]${licenseURL}
 
 Table of Contents:
 1. [Description](#description)
